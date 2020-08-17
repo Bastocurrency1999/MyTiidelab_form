@@ -1,0 +1,127 @@
+@font-face{
+	font-family:Sriracha-Regular;
+	src:url("font/Sriracha-Regular.ttf")format("truetype");
+}
+body{
+	margin:0;
+	padding:0;
+	width:100%;
+	background:#fff;
+}
+*{
+	box-sizing:border-box;
+	font-family:Sriracha-Regular;
+}
+h3{
+	line-height:.6;
+	font-size:2.3vw;
+	text-align:center;
+	color:white;
+}
+.form-container{
+	border:hidden;
+	width:60%;
+	margin:100px auto;
+	height:460px;
+	display:flex;
+	box-shadow:2px 5px 10px #065381;
+}
+.form-container .logo-wrapper{
+	border:hidden;
+	width:50%;
+}
+.form-container .logo-wrapper img{
+	width:100%;
+	height:100%;
+}
+.form-container .form-wrapper{
+	border:hidden;
+	width:50%;
+	padding-top:8px;
+	padding-left:20px;
+	padding-right:20px;
+	padding-bottom:10px;
+	box-sizing:border-box;
+	/*background:#FE912A;*/
+	background:#065381;
+}
+.form-wrapper input{
+	width:100%;
+	padding:4px;
+	font-size:1.5vw;
+	line-height:.5;
+	border-radius:5px;
+	border:2px solid #F7F7F7;
+	padding-left:10px;
+	outline:none;
+	background:#F7F7F7;
+}
+.form-wrapper input:focus{
+/*	background:rgb(254, 145, 42);
+	color:white;*/
+	background:rgb(6, 83, 129);
+	color:white;
+	transition:700ms ease-in-out;
+}
+.form-wrapper input[type=submit]{
+	font-size:1.8vw;
+	font-weight:bold;
+	letter-spacing:2px;
+	color:white;
+	width:100%;
+	padding:18px;
+	border-radius:5px;
+	border:1px solid #FE912A;
+	background:#FE912A;
+	text-shadow:1px 1px 1px #065381;
+}
+/*================= media queries for smaller device , sm md and lg===============================*/
+/*============================================== start============================================*/
+@media(max-width:320px){
+h3{line-height:.6;font-size:6vw;text-align:center;color:white;}
+.form-container{width:98%;margin:50px auto;display:flex;height:700px;flex-direction:column;}
+.form-container .logo-wrapper{width:100%;height:40%;}
+.form-container .form-wrapper{width:100%;height:60%;}
+.form-wrapper input{font-size:4.5vw;}
+.form-wrapper input[type=submit]{font-size:5vw;}}
+/*============================================== end==========================================*/
+
+/*============================================== start============================================*/
+@media(min-width:320px) and (max-width:375px){
+h3{line-height:.6;font-size:6vw;text-align:center;color:white;}
+.form-container{width:98%;margin:50px auto;display:flex;height:700px;flex-direction:column;}
+.form-container .logo-wrapper{width:100%;height:40%;}
+.form-container .form-wrapper{width:100%;height:60%;}
+.form-wrapper input{font-size:4.5vw;}
+.form-wrapper input[type=submit]{font-size:5vw;}}
+/*============================================== end==========================================*/
+
+/*============================================== start============================================*/
+@media(min-width:375px) and (max-width:424px){
+h3{line-height:.6;font-size:6vw;text-align:center;color:white;}
+.form-container{width:95%;margin:50px auto;display:flex;height:750px;flex-direction:column;}
+.form-container .logo-wrapper{width:100%;height:40%;}
+.form-container .form-wrapper{width:100%;height:60%;}
+.form-wrapper input{font-size:4.5vw;}
+.form-wrapper input[type=submit]{font-size:5vw;}}
+/*============================================== end==========================================*/
+
+/*============================================== start============================================*/
+@media(min-width:425px) and (max-width:600px){
+h3{line-height:.6;font-size:5vw;text-align:center;color:white;}
+.form-container{width:80%;margin:50px auto;display:flex;height:750px;flex-direction:column;}
+.form-container .logo-wrapper{width:100%;height:42%;}
+.form-container .form-wrapper{width:100%;height:58%;border:hidden;padding:10px;padding-top:0px;box-sizing:border-box;}
+.form-wrapper input{font-size:3vw;}
+.form-wrapper input[type=submit]{font-size:3vw;}}
+/*============================================== end==========================================*/
+
+/*============================================== start============================================*/
+@media(min-width:600px) and (max-width:800px){
+h3{line-height:.3;font-size:4vw;text-align:center;color:white;}
+.form-container{width:65%;margin:50px auto;display:flex;height:750px;flex-direction:column;}
+.form-container .logo-wrapper{width:100%;height:40%;}
+.form-container .form-wrapper{width:100%;height:60%;border:hidden;padding:10px;padding-top:0px;box-sizing:border-box;}
+.form-wrapper input{font-size:2.5vw;}
+.form-wrapper input[type=submit]{font-size:3vw;}}
+/*============================================== end==========================================*/

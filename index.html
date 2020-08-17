@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- to use tiidelab icon in the title bar -->
+	<title>TIIDELAB signup | form</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/icon" href="logo/tiidelab.jpg">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="form-container">
+
+	<div class="logo-wrapper">
+		<img src="logo/logo.png" alt="logo" srcset="">
+	</div>
+
+	<div class="form-wrapper">
+    <h3>Registration Form</h3>
+	<form action="" name="signupform" id="signupform" onsubmit="processForm();">
+      	<input type="text" name="fullname" id="fullname" placeholder="Your name in Full" required><p></p>
+      	<input type="email" name="email" id="email" placeholder="Your Email Address" required><p></p>
+      	<input type="text" name="username" id="username" placeholder="Your Username" required><p></p>
+      	<input type="password" name="password" id="password" placeholder="Your Password" required><p></p>
+      	<input type="password" name="cPassword" id="RetypePassword" placeholder="Re-type your Password" required><p></p>
+
+      	<input type="submit" value="Signup" class="submit" id="submit">
+		</form>
+	</div>
+</div>
+<script>
+  document.getElementById('signupform').addEventListener("submit",function(even){
+		event.preventDefault();
+	})
+
+	function processForm()
+	{
+	fullname = document.getElementById('fullname').value;
+	email = document.getElementById('email').value;
+	username= document.getElementById('username').value;
+	password = document.getElementById('password').value;
+	cPassword = document.getElementById('RetypePassword').value;
+
+	var data ={
+		"fullname":fullname,
+		"email":email,
+		"username":username,
+		"newpassword":password,
+		"isEnabled":true,
+		"roles":["user"],
+	}
+	
+	if (password!=cPassword) {
+		alert('password mismatched');
+	}else{
+        fetch('https://api.openclass.ng/Register',{
+           method:'POST',
+           body:JSON.stringify(data),
+           headers:{
+           	'Content-Type':'application/json'
+           }
+
+        }).then(function(data){
+        	alert('congrats')
+        })
+	}
+}
+</script>
+</body>
+</html>
